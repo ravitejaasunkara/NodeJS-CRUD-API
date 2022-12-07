@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const router = require('./router');
-const PORT = 2000;
+const PORT = process.env.PORT || 3000;
 const url = 'mongodb+srv://user2:user2@ravicluster.8czoq5w.mongodb.net/?retryWrites=true&w=majority';
 app.use(express.json());
 mongoose.connect(url,
